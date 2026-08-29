@@ -1,0 +1,13 @@
+{
+  "name": "a-perfect-day",
+  "version": "1.0.0",
+  "description": "A Perfect Day interactive game",
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "three": "^0.179.1",
+    "vite": "^7.0.0"
+  }
+}

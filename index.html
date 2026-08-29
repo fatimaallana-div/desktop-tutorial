@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>A Perfect Day</title>
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+</head>
+
+<body>
+
+    <main id="game">
+
+        <section
+            id="intro-screen"
+            class="screen active"
+        >
+
+            <div class="decorations">
+
+                <span>🎀</span>
+                <span>✨</span>
+                <span>🌸</span>
+                <span>💗</span>
+                <span>🦋</span>
+                <span>🎀</span>
+
+            </div>
+
+            <div class="intro-content">
+
+                <p class="eyebrow">
+                    WELCOME TO
+                </p>
+
+                <h1>
+                    A Perfect Day
+                </h1>
+
+                <p class="intro-text">
+                    Create your world.
+                    Create your avatar.
+                    Create your perfect day.
+                </p>
+
+                <button id="start-button">
+                    Begin ✨
+                </button>
+
+            </div>
+
+        </section>
+    <section
+    id="avatar-screen"
+    class="screen"
+>
+
+    <div class="avatar-page">
+
+        <div class="avatar-header">
+
+            <button
+                id="avatar-back-button"
+                class="back-button"
+            >
+                ← Back
+            </button>
+
+            <div class="avatar-title">
+
+                <p class="eyebrow">
+                    STEP 01 · YOUR CHARACTER
+                </p>
+
+                <h2>
+                    Create your avatar
+                </h2>
+
+                <p>
+                    Make her feel like you ✨
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="avatar-layout">
+
+            <!-- ========================= -->
+            <!-- LIVE AVATAR -->
+            <!-- ========================= -->
+
+            <div class="avatar-stage">
+
+                <div class="stage-decorations">
+
+                    <span>🎀</span>
+                    <span>✨</span>
+                    <span>🌸</span>
+                    <span>🦋</span>
+                    <span>💗</span>
+
+                </div>
+
+
+                <div
+                    id="avatar-display"
+                    class="avatar-display"
+                >
+
+                    <div class="avatar-shadow"></div>
+
+
+                    <div class="avatar-character">
+
+                        <!-- HAIR BACK -->
+
+                        <div
+                            id="avatar-hair-back"
+                            class="avatar-hair-back"
+                        ></div>
+
+
+                        <!-- BODY -->
+
+                        <div
+                            id="avatar-body"
+                            class="avatar-body"
+                        ></div>
+
+
+                        <!-- LEGS -->
+
+                        <div class="avatar-legs">
+
+                            <div class="leg left-leg"></div>
+
+                            <div class="leg right-leg"></div>
+
+                        </div>
+
+
+                        <!-- HEAD -->
+
+                        <div
+                            id="avatar-head"
+                            class="avatar-head"
+                        >
+
+                            <div
+                                id="avatar-hair-front"
+                                class="avatar-hair-front"
+                            ></div>
+
+
+                            <div class="avatar-face">
+
+                                <div class="eyes">
+
+                                    <span
+                                        id="left-eye"
+                                        class="eye"
+                                    ></span>
+
+                                    <span
+                                        id="right-eye"
+                                        class="eye"
+                                    ></span>
+
+                                </div>
+
+
+                                <div class="nose"></div>
+
+
+                                <div class="mouth"></div>
+
+
+                                <div
+                                    id="makeup-effect"
+                                    class="makeup-effect"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ========================= -->
+            <!-- CUSTOMIZATION PANEL -->
+            <!-- ========================= -->
+
+            <div class="avatar-controls">
+
+                <div class="control-card">
+
+                    <label for="avatar-name">
+                        What's her name?
+                    </label>
+
+                    <input
+                        id="avatar-name"
+                        type="text"
+                        maxlength="18"
+                        placeholder="Give her a name..."
+                    >
+
+                </div>
+
+
+                <div class="control-card">
+
+                    <h3>
+                        Hair colour
+                    </h3>
+
+                    <div
+                        id="hair-color-options"
+                        class="choice-grid"
+                    >
+
+                        <button
+                            class="choice-button active"
+                            data-hair-color="brown"
+                        >
+                            🤎 Brown
+                        </button>
+
+                        <button
+                            class="choice-button"
+                            data-hair-color="black"
+                        >
+                            🖤 Black
+                        </button>
+
+                        <button
+                            class="choice-button"
+                            data-hair-color="blonde"
+                        >
+                            💛 Blonde
+                        </button>
+
+                        <button
+                            class="choice-button"
+                            data-hair-color="pink"
+                        >
+                            🎀 Pink
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="control-card">
+
+                    <h3>
+                        Hair style
+                    </h3>
+
+                    <div
+                        id="hair-style-options"
+                        class="choice-grid"
+                    >
+
+                        <button
+                            class="choice-button active"
+                            data-hair-style="straight"
+                        >
+                            straight
+                        </button>
+
+                        <button
+                            class="choice-button"
+                            data-hair-style="wavy"
+                        >
+                            wavy
+                        </button>
+
+                        <button
+                            class="choice-button"
+                            data-hair-style="curly"
+                        >
+                            curly
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="control-card">
+
+                    <h3>
+                        Eye colour
+                    </h3>
+
+                    <div
+                        id="eye-color-options"
+                        class="choice-grid"
+                    >
+
+                        <button
+                            class="choice-button active"
+                            data-eye-color="brown"
+                        >
+                            🤎 Brown
+                        </button>
+
+                        <button
+                            class="choice-button"
+                            data-eye-color="blue"
+                        >
+                            💙 Blue
+                        </button>
+
+                        <button
+                            class="choice-button"
+                            data-eye-color="green"
+                        >
+                            💚 Green
+                        </button>
+
+                        <button
+                            class="choice-button"
+                            data-eye-color="hazel"
+                        >
+                            🩷 Hazel
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                        <div class="control-card">
+
+                    <h3>
+                        Outfit
+                    </h3>
+
+                    <div
+                        id="clothing-options"
+                        class="choice-grid"
+                    >
+
+                        <button
+                            class="choice-button active"
+                            data-clothing="baggy"
+                        >
+                            🧸 Baggy
+                        </button>
+
+                        <button
+                            class="choice-button"
+                            data-clothing="casual"
+                        >
+                            👖 Casual
+                        </button>
+
+                        <button
+                            class="choice-button"
+                            data-clothing="dress"
+                        >
+                            👗 Fitted
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="avatar-continue"
+                    class="primary-button"
+                >
+                    Continue ✨
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>    
+<!-- =========================================
+     PERSONALITY / VIBE SELECTION
+========================================= -->
+
+<section
+    id="personality-screen"
+    class="screen personality-screen"
+>
+
+    <!-- Floating decorations -->
+
+    <div class="floating-sticker sticker-1">🎀</div>
+    <div class="floating-sticker sticker-2">✨</div>
+    <div class="floating-sticker sticker-3">🌷</div>
+    <div class="floating-sticker sticker-4">🦋</div>
+    <div class="floating-sticker sticker-5">💌</div>
+    <div class="floating-sticker sticker-6">☁️</div>
+
+
+    <div class="personality-container">
+
+        <p class="eyebrow">
+            A LITTLE ABOUT YOU
+        </p>
+
+        <h1>
+            What's your vibe? 🎀
+        </h1>
+
+        <p class="personality-subtitle">
+            Pick one or as many as feel like you.
+        </p>
+
+
+        <!-- VIBE OPTIONS -->
+
+        <div class="personality-options">
+
+            <button
+                class="personality-choice"
+                data-personality="dreamy"
+            >
+                ☁️
+                <span>Dreamy</span>
+            </button>
+
+
+            <button
+                class="personality-choice"
+                data-personality="adventurous"
+            >
+                🦋
+                <span>Adventurous</span>
+            </button>
+
+
+            <button
+                class="personality-choice"
+                data-personality="funny"
+            >
+                😂
+                <span>Funny</span>
+            </button>
+
+
+            <button
+                class="personality-choice"
+                data-personality="creative"
+            >
+                🎨
+                <span>Creative</span>
+            </button>
+
+
+            <button
+                class="personality-choice"
+                data-personality="cozy"
+            >
+                🧸
+                <span>Cozy</span>
+            </button>
+
+
+            <button
+                class="personality-choice"
+                data-personality="curious"
+            >
+                🌷
+                <span>Curious</span>
+            </button>
+
+        </div>
+
+
+        <p
+            id="selected-vibes"
+            class="selected-vibes"
+        >
+            Choose your vibes ✨
+        </p>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="personality-navigation">
+
+            <button
+                id="personality-back"
+                class="back-button"
+            >
+                ← Back
+            </button>
+
+
+            <button
+                id="personality-continue"
+                class="continue-button"
+            >
+                Continue ✨
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     PERSONALITY REVEAL / FLIP CARD
+========================================= -->
+
+<section
+    id="personality-reveal-screen"
+    class="screen personality-screen"
+>
+
+    <div class="floating-sticker sticker-1">🎀</div>
+    <div class="floating-sticker sticker-2">✨</div>
+    <div class="floating-sticker sticker-3">🌷</div>
+    <div class="floating-sticker sticker-4">🦋</div>
+    <div class="floating-sticker sticker-5">💌</div>
+    <div class="floating-sticker sticker-6">☁️</div>
+
+
+    <div class="reveal-container">
+
+        <p class="eyebrow">
+            YOUR PERFECT-DAY VIBE
+        </p>
+
+        <h1>
+            A little note about you 💌
+        </h1>
+
+
+        <!-- FLIP CARD -->
+
+        <div
+            id="personality-card"
+            class="personality-card"
+        >
+
+            <div class="card-inner">
+
+                <!-- FRONT -->
+
+                <div class="card-face card-front">
+
+                    <span class="card-small">
+                        A NOTE FOR
+                    </span>
+
+                    <div
+                        id="card-name-front"
+                        class="card-name-front"
+                    >
+                        Your avatar
+                    </div>
+
+                    <div class="card-question">
+                        💌
+                    </div>
+
+                    <p>
+                        Tap to reveal your vibe
+                    </p>
+
+                </div>
+
+
+                <!-- BACK -->
+
+                <div class="card-face card-back">
+
+                    <div
+                        id="card-emoji"
+                        class="card-emoji"
+                    >
+                        ✨
+                    </div>
+
+                    <h2 id="card-title">
+                        Your vibe
+                    </h2>
+
+                    <p
+                        id="card-vibes"
+                        class="card-vibes"
+                    >
+                    </p>
+
+                    <p id="card-message">
+                    </p>
+
+                    <small>
+                        — A little reminder for you ♡
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p class="flip-hint">
+            ✨ Tap the card to turn it over ✨
+        </p>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="personality-navigation">
+
+            <button
+                id="reveal-back"
+                class="back-button"
+            >
+                ← Back
+            </button>
+
+
+            <button
+                id="reveal-continue"
+                class="continue-button"
+            >
+                Continue ✨
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================
+     WORLD SELECTION
+========================================= -->
+
+<section
+    id="world-screen"
+    class="screen world-screen"
+>
+
+    <div class="world-stickers">
+        <span>✨</span>
+        <span>🎀</span>
+        <span>🦋</span>
+        <span>🌷</span>
+        <span>☁️</span>
+        <span>💫</span>
+    </div>
+
+
+    <div class="world-container">
+
+        <p class="eyebrow">
+            LEVEL 1
+        </p>
+
+        <h1>
+            Choose your world 🌍
+        </h1>
+
+        <p class="world-subtitle">
+            Where should your perfect day take place?
+        </p>
+
+
+        <div class="world-options">
+
+
+            <button
+                class="world-choice"
+                data-world="fairy"
+            >
+
+                <span class="world-icon">
+                    🧚
+                </span>
+
+                <strong>
+                    Fairy Tale
+                </strong>
+
+                <small>
+                    Magic, fairies & flowers
+                </small>
+
+            </button>
+
+
+            <button
+                class="world-choice"
+                data-world="future"
+            >
+
+                <span class="world-icon">
+                    🤖
+                </span>
+
+                <strong>
+                    Future AI
+                </strong>
+
+                <small>
+                    Robots & flying cars
+                </small>
+
+            </button>
+
+
+            <button
+                class="world-choice"
+                data-world="forest"
+            >
+
+                <span class="world-icon">
+                    🌲
+                </span>
+
+                <strong>
+                    Enchanted Forest
+                </strong>
+
+                <small>
+                    Trees & tiny creatures
+                </small>
+
+            </button>
+
+
+            <button
+                class="world-choice"
+                data-world="tropical"
+            >
+
+                <span class="world-icon">
+                    🌴
+                </span>
+
+                <strong>
+                    Tropical
+                </strong>
+
+                <small>
+                    Sunshine & greenery
+                </small>
+
+            </button>
+
+
+            <button
+                class="world-choice"
+                data-world="beach"
+            >
+
+                <span class="world-icon">
+                    🐚
+                </span>
+
+                <strong>
+                    Beach
+                </strong>
+
+                <small>
+                    Ocean, sand & shells
+                </small>
+
+            </button>
+
+
+            <button
+                class="world-choice"
+                data-world="real"
+            >
+
+                <span class="world-icon">
+                    🏙️
+                </span>
+
+                <strong>
+                    Real World
+                </strong>
+
+                <small>
+                    Your everyday dream day
+                </small>
+
+            </button>
+
+        </div>
+
+
+        <div class="world-navigation">
+
+            <button
+                id="world-back"
+                class="back-button"
+            >
+                ← Back
+            </button>
+
+            <button
+                id="world-continue"
+                class="continue-button"
+            >
+                Choose World ✨
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================
+     GAME MAP
+========================================= -->
+
+<section
+    id="map-screen"
+    class="screen map-screen"
+>
+
+
+    <!-- FLOATING DECORATIONS -->
+
+    <div class="map-decoration map-deco-1">
+        🎀
+    </div>
+
+    <div class="map-decoration map-deco-2">
+        ✨
+    </div>
+
+    <div class="map-decoration map-deco-3">
+        🌷
+    </div>
+
+    <div class="map-decoration map-deco-4">
+        🦋
+    </div>
+
+    <div class="map-decoration map-deco-5">
+        💕
+    </div>
+
+
+    <!-- TOP -->
+
+    <div class="map-top">
+
+        <div class="map-welcome">
+
+            <p class="eyebrow">
+                YOUR PERFECT DAY
+            </p>
+
+            <h1>
+                Hi
+                <span id="map-player-name">
+                    Dreamer
+                </span>
+                💕
+            </h1>
+
+            <p>
+                Welcome to your perfect day journey ✨
+            </p>
+
+        </div>
+
+
+        <div class="journey-title">
+
+            <span>🎀</span>
+
+            <strong>
+                Your Journey
+            </strong>
+
+            <span>🎀</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- HORIZONTAL MAP -->
+
+    <div class="map-scroll">
+
+        <div class="game-map">
+
+
+            <!-- PATH -->
+
+            <div class="map-path"></div>
+
+
+            <!-- LEVEL 1 -->
+
+            <button
+                class="map-level level-1"
+                data-level="1"
+            >
+
+                <span
+                    class="map-level-emoji"
+                >
+                    🌍
+                </span>
+
+                <span
+                    class="map-level-title"
+                >
+                    Level 1
+                </span>
+
+            </button>
+
+
+            <!-- LEVEL 2 -->
+
+            <button
+                class="map-level level-2"
+                data-level="2"
+            >
+
+                <span
+                    class="map-level-emoji"
+                >
+                    🌤️
+                </span>
+
+                <span
+                    class="map-level-title"
+                >
+                    Level 2
+                </span>
+
+            </button>
+
+
+            <!-- LEVEL 3 -->
+
+            <button
+                class="map-level level-3"
+                data-level="3"
+            >
+
+                <span
+                    class="map-level-emoji"
+                >
+                    ☀️
+                </span>
+
+                <span
+                    class="map-level-title"
+                >
+                    Level 3
+                </span>
+
+            </button>
+
+
+            <!-- LEVEL 4 -->
+
+            <button
+                class="map-level level-4"
+                data-level="4"
+            >
+
+                <span
+                    class="map-level-emoji"
+                >
+                    🥞
+                </span>
+
+                <span
+                    class="map-level-title"
+                >
+                    Level 4
+                </span>
+
+            </button>
+
+
+            <!-- LEVEL 5 -->
+
+            <button
+                class="map-level level-5"
+                data-level="5"
+            >
+
+                <span
+                    class="map-level-emoji"
+                >
+                    🦋
+                </span>
+
+                <span
+                    class="map-level-title"
+                >
+                    Level 5
+                </span>
+
+            </button>
+
+
+            <!-- LEVEL 6 -->
+
+            <button
+                class="map-level level-6"
+                data-level="6"
+            >
+
+                <span
+                    class="map-level-emoji"
+                >
+                    📖
+                </span>
+
+                <span
+                    class="map-level-title"
+                >
+                    Level 6
+                </span>
+
+            </button>
+
+
+            <!-- LEVEL 7 -->
+
+            <button
+                class="map-level level-7"
+                data-level="7"
+            >
+
+                <span
+                    class="map-level-emoji"
+                >
+                    💌
+                </span>
+
+                <span
+                    class="map-level-title"
+                >
+                    Level 7
+                </span>
+
+            </button>
+
+
+            <!-- LEVEL 8 -->
+
+            <button
+                class="map-level level-8"
+                data-level="8"
+            >
+
+                <span
+                    class="map-level-emoji"
+                >
+                    ☕
+                </span>
+
+                <span
+                    class="map-level-title"
+                >
+                    Level 8
+                </span>
+
+            </button>
+
+
+            <!-- LEVEL 9 -->
+
+            <button
+                class="map-level level-9"
+                data-level="9"
+            >
+
+                <span
+                    class="map-level-emoji"
+                >
+                    🍝
+                </span>
+
+                <span
+                    class="map-level-title"
+                >
+                    Level 9
+                </span>
+
+            </button>
+
+
+            <!-- LEVEL 10 -->
+
+            <button
+                class="map-level level-10"
+                data-level="10"
+            >
+
+                <span
+                    class="map-level-emoji"
+                >
+                    🌙
+                </span>
+
+                <span
+                    class="map-level-title"
+                >
+                    Level 10
+                </span>
+
+            </button>
+
+
+            <!-- SMALL AVATAR -->
+
+            <div
+                id="map-avatar"
+                class="map-avatar"
+            >
+                🧍‍♀️
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- BOTTOM -->
+
+    <div class="map-bottom">
+
+        <button
+            id="map-back"
+            class="back-button"
+        >
+            ← Back
+        </button>
+
+        <span>
+            Follow the path to create your perfect day ✨
+        </span>
+
+    </div>
+
+
+</section>
+<!-- =========================================
+     LEVEL 2 — WAKE UP
+========================================= -->
+
+<section id="wake-screen" class="screen">
+
+    <button
+        class="back-button"
+        onclick="showScreen('map-screen')"
+    >
+        ← Map
+    </button>
+
+    <div class="wake-container">
+
+        <div class="wake-decoration">
+            ☀️ ✨ 🎀 🌸 ✨ ☁️
+        </div>
+
+        <p class="level-label">
+            LEVEL 2
+        </p>
+
+        <h1>
+            What time do you wake up?
+        </h1>
+
+        <p class="wake-subtitle">
+            Choose the beginning of your perfect morning ♡
+        </p>
+
+        <div class="wake-options">
+
+            <button class="wake-option" data-time="6:00 AM">
+                🌅
+                <span>6:00 AM</span>
+            </button>
+
+            <button class="wake-option" data-time="7:00 AM">
+                ☀️
+                <span>7:00 AM</span>
+            </button>
+
+            <button class="wake-option" data-time="8:00 AM">
+                🌷
+                <span>8:00 AM</span>
+            </button>
+
+            <button class="wake-option" data-time="9:00 AM">
+                💕
+                <span>9:00 AM</span>
+            </button>
+
+            <button class="wake-option" data-time="10:00 AM">
+                💤
+                <span>10:00 AM</span>
+            </button>
+
+        </div>
+
+        <button
+            id="wake-continue"
+            class="continue-button"
+            disabled
+        >
+            Continue ✨
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     LEVEL 3 — BREAKFAST
+========================================= -->
+
+<section id="breakfast-screen" class="screen">
+
+    <button
+        class="back-button"
+        onclick="showScreen('map-screen')"
+    >
+        ← Map
+    </button>
+
+    <div class="breakfast-container">
+
+        <p class="level-label">
+            LEVEL 3
+        </p>
+
+        <h1>
+            What's for breakfast? 🥞
+        </h1>
+
+        <p class="breakfast-subtitle">
+            Choose the breakfast that belongs in your perfect day ♡
+        </p>
+
+
+        <!-- STEP 1 -->
+
+        <div
+            id="breakfast-type-section"
+            class="breakfast-step"
+        >
+
+            <h2>
+                What do you want? ✨
+            </h2>
+
+            <div
+                id="breakfast-type-options"
+                class="breakfast-options"
+            >
+                <!-- JavaScript will create these -->
+            </div>
+
+        </div>
+
+
+        <!-- STEP 2 -->
+
+        <div
+            id="breakfast-choice-section"
+            class="breakfast-step hidden"
+        >
+
+            <h2 id="breakfast-choice-title">
+                Choose your breakfast ✨
+            </h2>
+
+            <div
+                id="breakfast-choice-options"
+                class="breakfast-options"
+            >
+                <!-- JavaScript will create these -->
+            </div>
+
+        </div>
+
+
+        <!-- FOOD -->
+
+        <div
+            id="food-section"
+            class="food-section hidden"
+        >
+
+            <h2>
+                Now enjoy it! 🍴
+            </h2>
+
+            <div
+                id="food-image"
+                class="food-image"
+            >
+                🥞
+            </div>
+
+            <p id="food-click-text">
+                Tap your food 5 times ✨
+            </p>
+
+            <div
+                id="food-click-count"
+                class="food-click-count"
+            >
+                5
+            </div>
+
+        </div>
+
+
+        <!-- NEXT -->
+
+        <button
+            id="breakfast-next"
+            class="continue-button hidden"
+        >
+            Next ✨
+        </button>
+
+    </div>
+
+</section>
+<!-- =========================================
+     LEVEL 3 — BREAKFAST
+========================================= -->
+
+<section id="morning-screen" class="screen">
+
+    <button
+        class="back-button"
+        id="morning-back"
+    >
+        ← Map
+    </button>
+
+    <div class="morning-container">
+
+        <p class="level-label">
+            LEVEL 3
+        </p>
+
+        <h1 id="breakfast-title">
+            What sounds good this morning? 🍳
+        </h1>
+
+        <p class="morning-subtitle">
+            Choose your perfect breakfast ♡
+        </p>
+
+
+        <!-- =====================================
+             STEP 1 — FOOD TYPE
+        ====================================== -->
+
+        <div
+            id="food-type-section"
+            class="food-section"
+        >
+
+            <h2>
+                What do you want? ✨
+            </h2>
+
+            <div
+                id="food-type-options"
+                class="food-options"
+            >
+
+                <!-- CREATED BY JAVASCRIPT -->
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             STEP 2 — PANCAKE TYPE
+        ====================================== -->
+
+        <div
+            id="pancake-section"
+            class="food-section hidden"
+        >
+
+            <h2>
+                Pick your pancakes 🥞
+            </h2>
+
+            <div class="food-options">
+
+                <button
+                    class="food-choice"
+                    data-pancake="chocolate"
+                >
+                    <span class="food-emoji">
+                        🍫🥞
+                    </span>
+
+                    <strong>
+                        Chocolate Pancakes
+                    </strong>
+
+                    <small>
+                        Sweet & chocolatey ♡
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="food-choice"
+                    data-pancake="vanilla"
+                >
+                    <span class="food-emoji">
+                        🤍🥞
+                    </span>
+
+                    <strong>
+                        Vanilla Pancakes
+                    </strong>
+
+                    <small>
+                        Soft & dreamy ✨
+                    </small>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             STEP 3 — FOOD
+        ====================================== -->
+
+        <div
+            id="food-interaction-section"
+            class="food-interaction hidden"
+        >
+
+            <p class="click-instruction">
+                Tap your breakfast to enjoy it! 💕
+            </p>
+
+            <div
+                id="food-display"
+                class="food-display"
+            >
+                🥞
+            </div>
+
+            <p id="food-clicks">
+                5 bites left ✨
+            </p>
+
+        </div>
+
+
+        <!-- =====================================
+             NEXT
+        ====================================== -->
+
+        <button
+            id="morning-next"
+            class="continue-button hidden"
+        >
+            Next ✨
+        </button>
+
+    </div>
+
+</section>
+    </main>
+
+
+    <script
+        type="module"
+        src="./js/main.js"
+    ></script>
+
+</body>
+
+</html>
